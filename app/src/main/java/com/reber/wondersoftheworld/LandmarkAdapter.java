@@ -1,14 +1,10 @@
 package com.reber.wondersoftheworld;
 
-<<<<<<< HEAD
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.location.GnssAntennaInfo;
 import android.view.LayoutInflater;
 import android.view.View;
-=======
-import android.view.LayoutInflater;
->>>>>>> origin/master
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -38,7 +34,6 @@ public class LandmarkAdapter extends RecyclerView.Adapter<LandmarkAdapter.Landma
     }
 
     @Override
-<<<<<<< HEAD
     public void onBindViewHolder(LandmarkHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.binding.recyclerViewTextView.setText(landmarkList.get(position).name);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -49,10 +44,6 @@ public class LandmarkAdapter extends RecyclerView.Adapter<LandmarkAdapter.Landma
                 holder.itemView.getContext().startActivity(intent);
             }
         });
-=======
-    public void onBindViewHolder(LandmarkHolder holder, int position) {
-        holder.binding.recyclerViewTextView.setText(landmarkList.get(position).name);
->>>>>>> origin/master
     }
 
     @Override
