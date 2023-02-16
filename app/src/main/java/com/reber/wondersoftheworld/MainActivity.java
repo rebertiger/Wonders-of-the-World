@@ -1,5 +1,6 @@
 package com.reber.wondersoftheworld;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -29,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+        //hide ActionBar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         landmarkArrayList = new ArrayList<>();
 
