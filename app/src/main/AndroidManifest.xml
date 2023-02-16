@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WondersOfTheWorld"
         tools:targetApi="31">
+
         <activity
             android:name=".Details"
             android:exported="false" />

@@ -1,6 +1,7 @@
 package com.reber.wondersoftheworld;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,9 +16,11 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class MainActivity extends AppCompatActivity {
+
     ArrayList<Landmark> landmarkArrayList;
     private ActivityMainBinding binding;
-    ListView listView;
+    /*ListView listView;
+    * */
 
 
     @Override
@@ -44,8 +47,12 @@ public class MainActivity extends AppCompatActivity {
         landmarkArrayList.add(statue);
         landmarkArrayList.add(temple);
 
-
+        binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        LandmarkAdapter landmarkAdapter = new LandmarkAdapter(landmarkArrayList);
+        binding.recyclerView.setAdapter(landmarkAdapter);
+        /*
         ArrayAdapter arrayAdapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1,landmarkArrayList.stream().map(landmark -> landmark.name).collect(Collectors.toList()));
+
         binding.listView.setAdapter(arrayAdapter);
         binding.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -55,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        */
 
     }
 
